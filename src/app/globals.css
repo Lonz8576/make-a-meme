@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Fira+Code:wght@300..700&family=Funnel+Display:wght@300..800&family=Lexend+Exa:wght@100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +6,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --large-font:  "Lexend Exa", sans-serif;
+  --noto-font: "Noto Sans Display", serif;
+  --fira-font:  "Fira Code", serif;
+  --display-font:  "Funnel Display", serif;
+  --cute-font: "Atma", serif;
 }
 
 @media (prefers-color-scheme: dark) {

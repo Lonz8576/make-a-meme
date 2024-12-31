@@ -1,5 +1,6 @@
 "use client"
 import { ImageKitProvider, IKImage, IKUpload } from "imagekitio-next";
+import { useState } from "react";
 
 
 const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
@@ -21,7 +22,9 @@ const authenticator = async () => {
 };
 
 const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
+ 
 export default function Home() {
+  const [filePath, setFilePath] = useState("");
   return (
     <div className="flex relative justify-center m-3">
      <ImageKitProvider 
@@ -30,9 +33,16 @@ export default function Home() {
       authenticator={authenticator}>
 
      <div className="relative justify-center p-0">
-     <IKImage  path="ruff.jpg" 
+      {filePath && (
+
+     <IKImage 
+      path={filePath}
      transformation={[ {raw: "l-text,i-iloveyou,fs-50,l-end"}]}
      width={500} height={500} alt="Ruff Day" />
+
+      )}
+
+
     </div>     
 
       <div>
@@ -43,6 +53,7 @@ export default function Home() {
           }  } 
           onSuccess={(response) => {
             console.log("success", response)
+            setFilePath(response.filePath)
           }} />
         </div>
 

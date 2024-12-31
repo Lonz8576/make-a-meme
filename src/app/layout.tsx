@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Make a Meme🥸",
-  description: "Meme nerator app",
+  description: "Meme Generator App",
 };
 
 export default function RootLayout({

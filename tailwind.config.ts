@@ -33,7 +33,7 @@ export default {
       serif: ['var(--fira-font)'],
       display: ['var(--display-font)'],
       cute: ['var(--cute-font)'],
-      xl: ['var(--large-font)'],
+      large: ['var(--large-font)'],
     },
     textSizes: {
       '4xs': '.375rem',   // 6px

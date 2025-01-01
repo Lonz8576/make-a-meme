@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import Header from "./Header";
 
 
 
@@ -17,6 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+      <div className="flex relative justify-center p-4">
+      <Header />
+      </div>
         {children}
       </body>
     </html>

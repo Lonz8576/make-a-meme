@@ -1,7 +1,7 @@
 "use client"
 import { ImageKitProvider, IKImage, IKUpload } from "imagekitio-next";
 import { useState } from "react";
-import Header from "./Header";
+
 
 
 const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
@@ -27,16 +27,14 @@ const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
 export default function Home() {
   const [filePath, setFilePath] = useState("");
   return (
-    <div className="flex relative justify-center m-3">
-      <div className="flex justify-center p-2">
-      <Header />
-      </div>
+    <div className="m-3">
+    
      <ImageKitProvider 
      publicKey={publicKey}
       urlEndpoint={urlEndpoint} 
       authenticator={authenticator}>
 
-     <div className="relative justify-center my-5">
+     <div className=" flex relative justify-start align-middle m-5">
       {filePath && (
 
      <IKImage 
@@ -49,10 +47,8 @@ export default function Home() {
 
     </div>     
 
-    
-
-      <div className="flex relative justify-start items-center">
-          <h2>File upload</h2>
+    <div className="flex relative justify-start items-center mx-2">
+          <h2 className="mx-2 font-display text-2xl">Upload your file to create memes!</h2>
           <IKUpload fileName="test-upload.png" 
           onError={(error) => {
             console.log("error", error)
@@ -62,6 +58,8 @@ export default function Home() {
             setFilePath(response.filePath)
           }} />
         </div>
+
+      
 
     </ImageKitProvider>
     

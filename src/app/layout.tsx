@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./Header";
 import 'flowbite';
+import Script from "next/script";
 
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
       <Header />
       </div>
         {children}
+        <Script src="../path/to/flowbite/dist/flowbite.min.js"></Script>
         
       </body>
     </html>

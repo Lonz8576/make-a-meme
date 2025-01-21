@@ -1,5 +1,6 @@
-import { redirect } from "next/dist/server/api-utils";
+
 import React from "react"
+import { redirect } from "next/navigation";
 
 
 export default function Header() {
@@ -30,7 +31,7 @@ return (
     <li className="flex ">
     <form action={async (formData) => {"use server"; const search = formData.get("search"); redirect(`/search?q=${search}`); } } 
      className="max-w-sm relative flex justify-evenly mx-5">   
-    <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only ">search</label>
+   
 
     <div className="relative">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -38,8 +39,12 @@ return (
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
             </svg>
         </div>
-        <input name="search" type="search" id="default-search" className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:focus:border-blue-500" placeholder="Search memes" required />
-        <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-gray-600 hover:bg-teal-300 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2 ">go</button>
+        <input name="search" 
+        type="search" 
+        id="search"
+        placeholder="Search memes" required
+        className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "  />
+       
     </div>
 </form>
     </li>

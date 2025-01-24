@@ -1,6 +1,5 @@
-import ImageKit from "imagekit";
-
-// eslint-disable-next-line @typescript-eslint/no-require-imports
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const ImageKit = require('imagekit');
 
 const imagekit = new ImageKit({
@@ -15,10 +14,20 @@ export default async function SearchPage( {
     searchParams: { q: string };
 }) {
     const files = await imagekit.listFiles({
-        searchQuery: `name:${searchParams.q}`,
+        searchQuery: `name:${searchParams.q}`, skip : 0,
+        limit : 10
+    }, function(error: any, result: any) { 
+        if(error) console.log(error);
+        else console.log(result);
     });
-
-    return 
-    <div>SearchPage</div>
     
+
+    return (
+    <div>
+        {files.map((file) => {
+            return <div key={file.fieldId}>{file.name}</div>;
+
+        })}
+        </div>
+    );
 }

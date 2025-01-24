@@ -29,7 +29,8 @@ return (
       </div>
     </li>
     <li className="flex ">
-    <form action={async (formData) => {"use server"; const search = formData.get("search"); redirect(`/search?q=${search}`); } } 
+    <form action={async (formData) => {"use server"; 
+    const search = formData.get("search"); redirect(`/search?q=${search}`); } } 
      className="max-w-sm relative flex justify-evenly mx-5">   
    
 

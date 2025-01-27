@@ -22,7 +22,7 @@ export default function Home() {
       transformation={[ {raw: "l-text,i-iloveyou,fs-50,l-end"}]}
       width={500} 
       height={500}
-       alt="Alt text" />
+      alt="Alt text" />
 
       )}
 

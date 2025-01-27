@@ -31,11 +31,13 @@ export  function Providers({ children }: { children: React.ReactNode})
     return(
         <div>
     <ImageKitProvider 
-     publicKey={publicKey}
+      publicKey={publicKey}
       urlEndpoint={urlEndpoint} 
       authenticator={authenticator}>
-            {children}
-            </ImageKitProvider>
+        
+        {children}
+
+     </ImageKitProvider>
         </div>
     ) 
 }

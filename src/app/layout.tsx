@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "./Header";
 import 'flowbite';
 import Script from "next/script";
-
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: "Make a Meme🥸",
@@ -19,12 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Providers>
       <div className="flex relative justify-center p-4">
       <Header />
       </div>
         {children}
+        </Providers>
+
         <Script src="../path/to/flowbite/dist/flowbite.min.js"></Script>
-        
       </body>
     </html>
   );

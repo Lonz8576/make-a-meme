@@ -1,3 +1,4 @@
+
 'use client'
 
 import { ImageKitProvider} from "imagekitio-next";
@@ -24,7 +25,7 @@ const authenticator = async () => {
 };
 
 const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
-export default function Providers({ childern }: { childern: React.ReactNode}) 
+export  function Providers({ children }: { children: React.ReactNode}) 
 {
    
     return(
@@ -35,7 +36,7 @@ export default function Providers({ childern }: { childern: React.ReactNode})
      publicKey={publicKey}
       urlEndpoint={urlEndpoint} 
       authenticator={authenticator}>
-            {childern}
+            {children}
             </ImageKitProvider>
         </div>
     ) 

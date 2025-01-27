@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 
-import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
+import ResultsList from "./results-list";
+
+
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const ImageKit = require('imagekit');
@@ -27,10 +29,8 @@ export default async function SearchPage( {
 
     return (
     <div>
-        {files.map((file: { fieldId: Key | null | undefined; name: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }) => {
-            return <div key={file.fieldId}>{file.name}</div>;
-
-        })}
+     <ResultsList files={files} />
+        
         </div>
     );
 }

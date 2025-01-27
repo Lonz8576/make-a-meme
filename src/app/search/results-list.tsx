@@ -4,7 +4,7 @@ import { FileObject } from "imagekit/dist/libs/interfaces";
 import { IKImage } from "imagekitio-next";
 
 
-export function ResultsList({ 
+export default function ResultsList({ 
     files
 
      }: {

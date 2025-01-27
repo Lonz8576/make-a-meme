@@ -6,13 +6,14 @@ import { urlEndpoint } from "./providers";
 
 
 
+
 export default function Home() {
   const [name, setName] = useState("");
   
   return (
     <div className="m-3">
 
-     <div className=" flex relative justify-start align-middle m-5">
+     <div className=" flex relative justify-start m-5">
      
       {name && (
 
@@ -20,8 +21,8 @@ export default function Home() {
       path={name}
       urlEndpoint={urlEndpoint}
       transformation={[ {raw: "l-text,i-iloveyou,fs-50,l-end"}]}
-      width={500} 
-      height={500}
+      width={300} 
+      height={300}
       alt="Alt text" />
 
       )}
@@ -43,6 +44,7 @@ export default function Home() {
           setName(response.filePath)
        }} />
         </div>
+      
 
       
 

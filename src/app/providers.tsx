@@ -24,14 +24,12 @@ const authenticator = async () => {
   }
 };
 
-const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
+ export const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
 export  function Providers({ children }: { children: React.ReactNode}) 
 {
    
     return(
         <div>
-           
- 
     <ImageKitProvider 
      publicKey={publicKey}
       urlEndpoint={urlEndpoint} 

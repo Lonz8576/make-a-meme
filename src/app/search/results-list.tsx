@@ -2,6 +2,7 @@
 
 import { FileObject } from "imagekit/dist/libs/interfaces";
 import { IKImage } from "imagekitio-next";
+import { urlEndpoint } from "../providers";
 
 
 export default function ResultsList({ 
@@ -20,7 +21,7 @@ export default function ResultsList({
             key={file.fileId}
             src={file.filePath}
             alt={file.name}
-            urlEndpoint={process.env.NEXT_PUBLIC_URL_ENDPOINT}
+            urlEndpoint={urlEndpoint}
             width={300}
             height={300}
             />

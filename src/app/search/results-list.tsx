@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 "use client";
 
 import { FileObject } from "imagekit/dist/libs/interfaces";
@@ -8,6 +9,7 @@ import { urlEndpoint } from "../providers";
 
 export default function ResultsList({ 
     files, 
+    
          }: {
      files: FileObject[];
      counts: {
@@ -19,8 +21,6 @@ export default function ResultsList({
     return (
         <div>
         {files.map((file) => (
-         
-
         <IKImage
             key={file.fileId}
             path={file.filePath}

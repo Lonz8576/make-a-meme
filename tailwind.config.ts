@@ -4,9 +4,11 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
+    "./node_modules/flowbite-react/lib/**/*.js",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    
     
   ],
   theme: {
@@ -125,6 +127,9 @@ export default {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [
+    require('flowbite/plugin')
+    
+  ],
   
 } satisfies Config;

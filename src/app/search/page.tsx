@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 
 
+import { unstable_noStore } from "next/cache";
 import ResultsList from "./results-list";
 
 
@@ -15,14 +16,14 @@ const imagekit = new ImageKit({
 });
 
 export default async function SearchPage( {
-    searchParams,
+    
 }: {
     searchParams: { q: string };
 }) {
-    
+    unstable_noStore();
     
   const files = await imagekit.listFiles({
-    tags: searchParams.q,
+    searchQuery: 'name:${searchParams.q}',
   });
 
  

@@ -8,9 +8,7 @@ import { urlEndpoint } from "../providers";
 
 export default function ResultsList({ 
     files, 
-    
-
-     }: {
+         }: {
      files: FileObject[];
      counts: {
      memeId: string;

@@ -25,6 +25,7 @@ const authenticator = async () => {
 };
 
  export const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
+
 export  function Providers({ children }: { children: React.ReactNode}) 
 {
    
@@ -39,5 +40,5 @@ export  function Providers({ children }: { children: React.ReactNode})
 
      </ImageKitProvider>
         </div>
-    ) 
+    ); 
 }

@@ -36,7 +36,7 @@ export default function ResultsList({
             />
             </div>
         ))}
-       console.log(file);
+       
        </div>
     );
 }

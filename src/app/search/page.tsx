@@ -9,14 +9,14 @@ import { imagekit } from "../lib/image-kit";
 
 
 export default async function SearchPage({
-    searchParams,
+    params,
 }: {
-  searchParams: { q: string };
+ params: { q: string };
 }) {
     unstable_noStore();
     
-    const files = imagekit.listFiles({
-        tags:searchParams.q
+    const files = await imagekit.listFiles({
+        tags:params.q
     
     });
   

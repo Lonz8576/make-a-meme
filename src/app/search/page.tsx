@@ -8,22 +8,22 @@ import { imagekit } from "../lib/image-kit";
 
 
 
-export default async function SearchPage( {
-    params,
+export default async function SearchPage({
+    searchParams,
 }: {
-  params: { q: string };
+  searchParams: { q: string };
 }) {
     unstable_noStore();
     
     const files = imagekit.listFiles({
-        tags: params.q
+        tags:searchParams.q
     
     });
   
 
     return (
     <div>
-     <ResultsList files={files} counts={[]} />
+     <ResultsList files={files}   counts={[]} />
         
         </div>
     );

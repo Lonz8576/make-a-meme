@@ -9,10 +9,10 @@ import { IKImage } from "imagekitio-next";
 
 export default function ResultsList({ 
     files, 
-    counts,
+    
 }: {
   files: FileObject[];
-  counts: {
+  tags: {
     memeId: string;
     count: number;
   }[];
@@ -22,11 +22,9 @@ export default function ResultsList({
         <div>
             
         {files.map((file) => (
-          
-            <div key={file.filePath}>
-                <div>
-                {counts.find((c) => c.memeId === file.fileId)?.count ?? 0}
-                </div>
+         
+            <div key={file.fileId}>
+                
         <IKImage
             key={file.fileId}
             path={file.filePath}
@@ -35,7 +33,7 @@ export default function ResultsList({
             height={300}
             />
             </div>
-        ))}
+        ))};
        
        </div>
     );

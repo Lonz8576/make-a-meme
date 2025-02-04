@@ -16,14 +16,14 @@ export default async function SearchPage({
     unstable_noStore();
     
     const files = await imagekit.listFiles({
-        tags:params.q
+        tags:params.q,
     
     });
   
 
     return (
     <div>
-     <ResultsList files={files}   counts={[]} />
+     <ResultsList files={files}  tags={[]} />
         
         </div>
     );

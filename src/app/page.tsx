@@ -20,7 +20,7 @@ export default function Home() {
      <IKImage 
       path={name}
       urlEndpoint={urlEndpoint}
-      transformation={[ {raw: "l-text,i-iloveyou,fs-50,l-end"}]}
+      transformation={[ {raw: "l-text, fs-50,l-end"}]}
       width={300} 
       height={300}
       alt="Alt text" />

@@ -14,12 +14,13 @@ export default function ResultsList({
      files: FileObject[];
      counts: {
      memeId: string;
-     count: number;
+     
      }[];
      }) {
 
     return (
         <div>
+            <div>
         {files.map((file) => (
         <IKImage
             key={file.fileId}
@@ -30,7 +31,7 @@ export default function ResultsList({
             />
             
         ))}
-       
+       </div>
        </div>
     );
 }

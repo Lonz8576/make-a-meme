@@ -9,15 +9,15 @@ import { IKImage } from "imagekitio-next";
 
 export default function ResultsList({ 
     files, 
-    
+  
 }: {
   files: FileObject[];
   tags: {
-    memeId: string;
+    name: string;
     count: number;
   }[];
      }) {
-
+        console.log(files)
     return (
         <div>
             

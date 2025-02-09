@@ -20,7 +20,6 @@ export default function Home() {
      <IKImage 
       path={name}
       urlEndpoint={urlEndpoint}
-      
       width={300} 
       height={300}
       alt="Alt text" />

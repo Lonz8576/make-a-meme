@@ -14,7 +14,7 @@ export default function ResultsList({
   files: FileObject[];
   tags: {
     name: string;
-    count: number;
+   
   }[];
      }) {
         console.log(files)

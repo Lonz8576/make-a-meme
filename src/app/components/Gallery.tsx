@@ -1,3 +1,4 @@
+"use client";
 
 import Image from "next/image"
 import React from "react"
@@ -8,7 +9,7 @@ export default function Gallery() {
 
 <div className="grid gap-4">
     <div>
-        <Image className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt=""  />
+        <Image className="h-auto max-w-full rounded-lg" src="" alt=""  />
     </div>
     <div className="grid grid-cols-5 gap-4">
         <div>

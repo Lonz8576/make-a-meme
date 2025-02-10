@@ -7,14 +7,15 @@ import { IKImage } from "imagekitio-next";
 
 
 
-export default function ResultsList({ 
+export function ResultsList({ 
     files, 
+    counts,
   
 }: {
   files: FileObject[];
-  tags: {
-    name: string;
-   
+  counts: {
+    memeId: string;
+    count: number;   
   }[];
      }) {
         console.log(files)
@@ -22,8 +23,6 @@ export default function ResultsList({
         <div>
             
         {files.map((file) => (
-         
-            <div key={file.fileId}>
                 
         <IKImage
             key={file.fileId}
@@ -32,7 +31,7 @@ export default function ResultsList({
             width={300}
             height={300}
             />
-            </div>
+           
         ))};
        
        </div>
